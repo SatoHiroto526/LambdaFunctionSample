@@ -8,10 +8,7 @@ import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import com.example.demo.controller.SampleController;
 
-import lombok.Data;
-
 @SpringBootApplication
-@Data
 //LambdaがSpringBootアプリケーションを起動する際にキックするクラス
 //RequestHandlerをimplements
 public class StartApp implements RequestHandler<Object, Object> {
