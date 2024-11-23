@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,6 +17,8 @@ import lombok.Data;
 @RestController
 //inputとcontextのgetter/setterを使えるようにする。
 @Data
+//Lambda環境で@Serviceクラスをインジェクションするために必要
+@ComponentScan({"com.example.demo.service"})
 @RequestMapping("/sample")
 public class SampleController {
 	
